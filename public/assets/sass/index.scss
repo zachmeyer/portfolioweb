@@ -1,0 +1,159 @@
+#index
+{
+    // Set Default Font for Element
+    @include regularFont();
+
+    // Core Container Styles
+    padding: 0;
+    margin: 0;
+
+    // Splash Jumbotron
+    .splash-image
+    {
+        // Small Devices
+        @media (max-width: 575.98px) {
+            background-image: url('../images/splash_xlowres.png');
+            max-height: 324px;
+        }
+
+        // Medium Devices
+        @media (min-width: 576px) and (max-width: 991.98px) {
+            background-image: url('../images/splash_lowres.png');
+            max-height: 576px;
+        }
+
+        // Standard Devices
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            background-image: url('../images/splash_standard.png');
+            max-height: 768px;
+        }
+
+        // Large Devices
+        @media (min-width: 1200px) {
+            background-image: url('../images/splash_hires.png');
+            max-height: 1079px;
+        }
+
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 100vh;
+        background-size: cover;
+        background-position: top center;
+        border-bottom: 1px solid $shade-gray-dark;
+    }
+
+    // About Briefing - Credit to https://ryanfitzgerald.github.io/devportfolio/ for design inspiration
+    .about-brief
+    {
+        position: relative;
+        margin: 0;
+        padding: 75px 15px;
+        border-bottom: 1px solid $shade-gray-borderdark; 
+    }
+
+    // Highlight Header
+    .highlight-header
+    {
+        position: relative;
+        display: inline-block;
+        margin: 0 0 30px 0;
+    }
+
+    .highlight-header:after
+    {
+        position: absolute;
+        content: '';
+        top: 100%;
+        height: 1px;
+        width: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: $shade-primary;
+    }
+
+    // Skills
+    .skills-highlight
+    {
+        display: block;
+        position: relative;
+        margin: 0;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: $shade-gray-white;
+
+        ul {
+            display: block;
+            margin: 0 auto;
+            padding-right: 15px;
+            padding-left: 15px;
+            max-width: 75%;
+        }
+
+        ul > li {
+            display: inline-block;
+            margin: 15px;
+            padding: 8px;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: $shade-gray-offwhite;
+            border-radius: 15px;
+            border: 1px solid $shade-gray-borderdark;
+        }
+    }
+
+    // Footer
+    .footer
+    {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding-top: 20px;
+        background: $shade-primary;
+        color: $shade-light;
+        min-height: 250px;
+
+        .footer-col
+        {
+            display: flex;
+            align-items: center;
+            min-height: 250px;
+            flex-flow: row wrap;
+
+            .lets-talk {
+                @include accentFont();
+                display: inline-block;
+                color: $shade-light;
+                font-size: 45px;
+                text-decoration: none;
+                height: auto;
+            }
+
+            .lets-talk:hover {
+                color: $shade-dark;
+            }
+
+            .lets-talk:visited {
+                color: $shade-light;
+                text-decoration: none;
+            }
+
+            .icon-container
+            {
+                font-size: 18px;
+            }
+
+            .icon-link
+            {
+                color: inherit;
+            }
+
+            .icon-link:hover
+            {
+                color: $shade-dark;
+            }
+        }
+    }
+}

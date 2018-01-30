@@ -1,0 +1,75 @@
+/* -- VARIABLES -- */
+// Colors
+$shade-dark: #042a2b;
+$shade-primary: #5eb1bf;
+$shade-light: #cdedf6;
+$shade-gray-light: #bfd7ea;
+$shade-gray-dark: #91aec1;
+$shade-gray-white: #fafafa;
+$shade-gray-offwhite: #e9e9e9;
+$shade-gray-borderdark: #d7d7d7;
+$shade-error: #b8336a;
+$shade-success: #4bc6b9;
+$shade-warning: #fa9f42;
+
+/* -- MIXINS -- */
+// Regular Font
+@mixin regularFont()
+{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@mixin accentFont()
+{
+    font-family: 'Oswald', sans-serif;
+}
+
+/* -- GLOBAL DEFAULTS -- */
+html, body
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    @include accentFont();
+    color: $shade-dark;
+}
+
+/* -- NAV BAR -- */
+.navbar-theme
+{
+    background-color: $shade-dark;
+
+    // Override all internal font colors
+    * {
+        color: $shade-gray-dark;
+    }
+
+    // Override Link Hover Colors
+    .nav-link:hover
+    {
+        color: $shade-primary !important;
+    }
+
+    .navbar-brand
+    {
+        @include accentFont();
+    }
+
+    .navbar-brand:hover
+    {
+        color: $shade-primary !important;
+    }
+}
+
+.flex-text-left { justify-content: left; }
+.flex-text-center { justify-content: center; }
+.flex-text-right { justify-content: right; }
+
+/* -- PAGES -- */
+@import "index.scss";
+
+
+
