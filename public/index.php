@@ -50,6 +50,7 @@
                 <li>Laravel PHP Framework</li>
                 <li>Phalcon PHP Framework</li>
                 <li>Vue.js Javascript Framework</li>
+                <li>Git</li>
             </ul>
         </div>
         <div class="footer">

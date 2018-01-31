@@ -1,0 +1,81 @@
+#portfolio
+{
+    // Set Default Font for Element
+    @include regularFont();
+
+    // Core Container Styles
+    padding: 0;
+    margin: 70px 0 0 0;
+
+    .section-header
+    {
+        text-align: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid $shade-gray-dark;
+    }
+
+    .push-down-header
+    {
+        margin-top: 25px;
+    }
+
+    // Portfolio Item
+    .portfolio-item-container
+    {
+        position: relative;
+        border: 1px solid $shade-gray-borderdark;
+        width: 50vw;
+        min-height: 150px;
+        background: linear-gradient($shade-gray-white, $shade-gray-offwhite);
+        padding: 10px;
+        margin-top: 25px;
+
+        .image-left-writing
+        {
+            display: block;
+            float: left;
+            border: 1px solid $shade-gray-borderdark;
+            background: url('/assets/images/pexels-photo-373076.jpeg');
+            width: 150px;
+            height: 100px;
+            margin-right: 25px;
+            margin-top: 10px;
+        }
+
+        .image-left-programming
+        {
+            display: block;
+            float: left;
+            border: 1px solid $shade-gray-borderdark;
+            background: url('/assets/images/pexels-photo-574077.jpeg');
+            width: 150px;
+            height: 100px;
+            margin-right: 25px;
+            margin-top: 10px;
+        }
+
+        .view-project
+        {
+            display: inline-block;
+            text-decoration: none;
+            color: darken($shade-primary, 25%);
+            margin-left: 175px;
+        }
+
+        .view-project-mod-margin
+        {
+            margin-left: 75px !important;
+        }
+
+        .view-project:visited
+        {
+            text-decoration: none;
+            color: darken($shade-primary, 25%);
+        }
+
+        .view-project:hover
+        {
+            color: $shade-gray-dark;
+        }
+    }
+}
